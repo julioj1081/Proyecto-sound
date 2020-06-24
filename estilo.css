@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+i,svg{
+    pointer-events: none;
+}
+
+.kick-pad, .snare-pad, .hihat-pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+.kick-pad{
+    background-color: rgb(160, 211, 224);
+}
+.snare-pad{
+    background-color: rgb(224, 160, 208);
+}
+.hihat-pad{
+    background-color: rgb(224, 194, 168);
+}
+.kick-pad.active{
+    background-color: rgb(59, 197, 231);
+}
+.snare-pad.active{
+    background-color: rgb(218, 58, 178);
+}
+.hihat-pad.active{
+    background-color: rgb(241, 158, 64);
+}
+.sequencer{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hihat-track, .snare-track, .kick-track{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 1rem;
+}
+.kick, .snare, .hihat{
+    display: flex;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+.controls button{
+    padding: 1rem;
+    border: none;
+    background-color: rgb(88, 88, 88);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.pad{
+    transition: all 0.5s ease;
+}
+.play{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+}
+select{
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+
+.mute.active{
+    background-color: #353535;
+}
+
+/*barra*/
+.tempo{
+    margin: 0.2rem;
+    width: 50%;
+}
+.tempo-slider{
+    padding: 0.1rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background-color: rgb(58, 58, 58);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.tempo p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+/*ANIMACION*/
+@keyframes playTrack{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
